@@ -15,7 +15,7 @@ Equality (i.e. `==`) is totally messed up in Javascript. You should, apart from 
 // you get the idea...
 ```
 
-The one exception to this rule is when checking for `null` or `undefined`. In Javascript, we can generally use either one, but they are not equal.This is because `null` and `undefined` are of different types.
+The one exception to this rule is when checking for `null` or `undefined`. In Javascript, we can generally use either one, but they are not equal. This is because `null` and `undefined` are of different types.
 
 ```js
 null === undefined; // false
@@ -30,7 +30,7 @@ var test;     // this is undefined
 test == null; // true
 
 test = 'hi there';
-test != undefined; //true
+test != undefined; // true
 ```
 
 #### Always remember to use `var`
@@ -54,6 +54,8 @@ test2 = 9876;
 Programmers coming from languages like Java get caught out on this one. In Java, you can declare a variable in an `if` statement and it will be scoped to that statement. That is, you cannot reference it outside of the `if` statement. Javascript does not behave like this.
 
 ```js
+var test = true;
+
 if (test) {
     var myVar = 'inside the if statement';
 }
@@ -61,7 +63,7 @@ if (test) {
 // if this was Java, this would be a compiler error
 // What actually happens is that we print out
 // 'inside the if statement' to the console
-console.log(myvar);
+console.log(myVar);
 ```
 
 In Javascript, the only way to scope a variable is to declare it inside a function. This is exactly why sometimes you see the main body of a javascript program enclosed inside a function:
